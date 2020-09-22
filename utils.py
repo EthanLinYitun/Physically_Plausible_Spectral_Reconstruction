@@ -2,7 +2,7 @@
 """
 Created on Mon Jun  1 12:19:10 2020
 
-@author: vby18pwu
+@author: Yi-Tun Lin
 """
 
 import poly

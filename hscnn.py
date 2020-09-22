@@ -1,11 +1,9 @@
 """
-
 Code modified from the following publication:
     
 Shi, Z., Chen, C., Xiong, Z., Liu, D., & Wu, F. (2018). 
 Hscnn+: Advanced cnn-based hyperspectral recovery from rgb images. 
 In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops (pp. 939-947).
-
 """
 
 import torch

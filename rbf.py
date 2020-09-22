@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-
 Code modified from the following website:
 
 Zenva - Python Machine Learning, Tutorials on Python Machine Learning, Data Science and Computer Vision
@@ -8,7 +7,6 @@ Zenva - Python Machine Learning, Tutorials on Python Machine Learning, Data Scie
 28/10/2017 by Mohit Deshpande
 
 url: https://pythonmachinelearning.pro/using-neural-networks-for-regression-radial-basis-function-networks/
-
 """
 
 import os
