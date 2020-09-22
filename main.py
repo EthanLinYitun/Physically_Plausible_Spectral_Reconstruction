@@ -23,7 +23,7 @@ regress_mode = {'type': 'poly', # poly, root-poly or rbf
                 'target_wavelength': np.arange(400,701,10)}
 
 advanced_mode = {'Physically_Plausible': True,
-                 'Data_Augmentation': [10, 1], # [a, b], a = range, b = iteration
+                 'Data_Augmentation': False, # "[a, b], a = range, b = iteration", or, "False"
                  'Exposure': [0.5,1,2],
                  'Sparse': True}
 
@@ -243,13 +243,13 @@ if __name__ == '__main__':
     if operation_mode['Test']:
         file_name = initialize_csvfile(directories['results'], regress_mode, advanced_mode, cost_funcs, test_modes)
             
-    for cmode in [1]:#[1, 2, 3, 4]:
+    for cmode in [1, 2, 3, 4]:
         print("Cross Validation", cmode)
         train_list, val_list, test_list = generate_crsval_imlist(resources['crsval_name_list'], crsval_mode=cmode)
         if operation_mode['Train'] & cmode in [1, 3]:
-            train(train_list[:5], crsval_mode=cmode)
+            train(train_list, crsval_mode=cmode)
         if operation_mode['Validation']:
-            validate(val_list[:5], crsval_mode=cmode)
+            validate(val_list, crsval_mode=cmode)
         if operation_mode['Test']:
-            test(test_list[:5], crsval_mode=cmode, file_name=file_name)
+            test(test_list, crsval_mode=cmode, file_name=file_name)
         
